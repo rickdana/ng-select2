@@ -14,8 +14,11 @@ export class AppComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.$(".js-example-basic-multiple").select2();
 
+    this.$(".js-example-basic-single").select2();
+
+    //autre utilisation de jquery
+    this.$(".select2").css({ "width": "15em"});
   }
 
 }
