@@ -4,6 +4,9 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import {JQ_TOKEN} from "./services/JQuery.service";
+
+declare let jQuery:Object;
 
 @NgModule({
   declarations: [
@@ -14,7 +17,9 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    { provide: JQ_TOKEN, useValue: jQuery },
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
